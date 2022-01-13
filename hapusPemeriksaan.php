@@ -1,9 +1,9 @@
 <?php
 	require "config/koneksi.php";
 
-	$UserId = $_GET['idPasien'];
+	$UserId = $_GET['id'];
 
-	mysqli_query($conn, "DELETE FROM pasien WHERE idPasien = '$UserId'");
+	mysqli_query($conn, "DELETE FROM pemeriksaan WHERE id = '$UserId'");
 
 		echo "
 		<script>

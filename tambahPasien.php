@@ -1,7 +1,17 @@
 <?php
+include 'config/koneksi.php';
 include 'komponen/starting-pages.php';
 include 'komponen/sidebar.php';
 include 'komponen/navbar.php';
+$GetTableGT = mysqli_query($conn, "SELECT MAX(idPasien) AS KodePS FROM pasien");
+$GetKodeGT = mysqli_fetch_array($GetTableGT);
+$GetMaxValue = $GetKodeGT['KodePS'];
+
+$SetNumberKodeGT = (int) substr($GetMaxValue, 4);
+$SetNumberKodeGT++;
+$SetCharKodeGT = "PAS";
+
+$GenerateKodeGT = $SetCharKodeGT."-". sprintf("%03s", $SetNumberKodeGT);
 ?>
 
 <div class="pcoded-main-container">
@@ -33,8 +43,8 @@ include 'komponen/navbar.php';
                                 <div class="row">
                                     <div class="col-lg-2">
                                         <div class="form-group">
-                                            <label class="form-control-label">No. Pasien</label>
-                                            <input type="text" class="form-control" name="idPasien" placeholder="Auto">
+                                            <label class="form-control-label">ID Pasien</label>
+                                            <input type="text" class="form-control" name="idPasien" placeholder="Auto" value="<?php echo $GenerateKodeGT ?>" readonly>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">

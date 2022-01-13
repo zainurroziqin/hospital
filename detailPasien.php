@@ -1,5 +1,4 @@
 <?php
-include 'config/koneksi1.php';
 include 'config/koneksi.php';
 include 'komponen/starting-pages.php';
 include 'komponen/sidebar.php';
@@ -32,13 +31,16 @@ $SelectData = query("SELECT * FROM pasien WHERE idPasien = '$idPas'")[0];
             </div>
             <div class="col-sm-12">
                 <div class="card">
-                            
-
-                            <form action="#" method="POST" enctype="multipart/form-data" autocomplete="OFF"> 
-                            <input type="hidden" name="idPasien" value="<?= $SelectData["idPasien"];?>"></input>
+                            <form action="updatePasien.php" method="POST" enctype="multipart/form-data" autocomplete="OFF"> 
                                 <center><h4 class="heading-small text mb-4 ml-4 mt-5">Data Pasien</h4></center>
                                 <div class="pl-lg-4">
                                 <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label">ID Pasien</label>
+                                            <input type="text" class="form-control" name="idPasien" placeholder="Auto" value="<?= $SelectData["idPasien"];?>">
+                                        </div>
+                                    </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Nama Pasien</label>

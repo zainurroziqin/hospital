@@ -17,7 +17,7 @@ $pasien = query("SELECT * FROM pasien")
                             <h5 class="m-b-10">Pasien</h5>
                         </div>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="Dashboard.php"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="dsashboard.php"><i class="feather icon-home"></i></a></li>
                             <li class="breadcrumb-item"><a href="#!">Pasien</a></li>
                             <!-- <li class="breadcrumb-item"><a href="#!">Basic Initialization</a></li> -->
                         </ul>

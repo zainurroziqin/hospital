@@ -1,9 +1,9 @@
 <?php
 	require "config/koneksi.php";
 
-	$UserId = $_GET['idPasien'];
+	$User = $_GET['username'];
 
-	mysqli_query($conn, "DELETE FROM pasien WHERE idPasien = '$UserId'");
+	mysqli_query($conn, "DELETE FROM user WHERE username = '$User'");
 
 		echo "
 		<script>
@@ -15,7 +15,7 @@
 			});
 		},10);  
 		window.setTimeout(function(){ 
-			window.location.replace('pasien.php');
+			window.location.replace('user.php');
 		},1500);
 		</script>
       ";
