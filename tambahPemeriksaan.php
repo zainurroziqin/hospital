@@ -12,12 +12,12 @@ include 'komponen/navbar.php';
                     <div class="row align-items-center">
                         <div class="col-md-12">
                             <div class="page-header-title">
-                                <h5 class="m-b-10">Tambah Data Pasien</h5>
+                                <h5 class="m-b-10">Tambah Data Pemeriksaan</h5>
                             </div>
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="dashboard.php"><i class="feather icon-home"></i></a></li>
                                 <li class="breadcrumb-item"><a href="pasien.php">Pasien</a></li>
-                                    <li class="breadcrumb-item"><a href="">Tambah Data Pasien</a></li>
+                                    <li class="breadcrumb-item"><a href="">Tambah Data Pemeriksaan</a></li>
                                 <!-- <li class="breadcrumb-item"><a href="#!">Basic Initialization</a></li> -->
                             </ul>
                         </div>

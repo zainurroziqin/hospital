@@ -56,11 +56,11 @@ $pasien = query("SELECT * FROM pasien")
                             <td><?= date ('d F Y', strtotime ($row["tanggal"])); ?></td>
                             <td><?= $row["alamat"]; ?></td>
                             <td>
-                                <a href="#">
+                                <a href="detailPasien.php">
                                     <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> Detail</button>
                                 </a>
 
-                                <a href="#">
+                                <a href="hapusPasien.php">
                                     <button type="button" class="btn btn-danger btn-sm tombol-hapus"><i class="fas fa-trash"></i> Hapus</button>
                                 </a>
                             </td>
