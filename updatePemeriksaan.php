@@ -10,11 +10,12 @@
    $InputRR = $_POST['RR'];
    $InputGDA = $_POST['GDA'];
    $InputP = $_POST['penunjang'];
+   $InputT = $_POST['Tindakan'];
    $InputHe = $_POST['healthEducation'];
    $InputO = $_POST['obat'];
    $InputDok = $_POST['namaDokter'];
       
-      if (empty($InputIP) ||  empty($InputDiag) || empty($InputSuhu) || empty($InputTgl) || empty($InputTd) || empty($InputS) || empty($InputRR) || empty($InputGDA) || empty($InputP) || empty($InputHe) || empty($InputO) || empty($InputDok)) {
+      if (empty($InputIP) ||  empty($InputDiag) || empty($InputSuhu) || empty($InputTgl) || empty($InputTd) || empty($InputS) || empty($InputRR) || empty($InputGDA) || empty($InputP) || empty($InputT) || empty($InputHe) || empty($InputO) || empty($InputDok)) {
          echo "
             <script>
                alert('Mohon lengkapi seluruh data!');
@@ -23,7 +24,7 @@
          ";
       }
       else {
-         mysqli_query($conn, "UPDATE pemeriksaan SET idPasien = '$InputIP', diagnosa = '$InputDiag', suhu = '$InputSuhu', tanggal = '$InputTgl', tekananDarah = '$InputTd', Spo2 = '$InputS', RR = '$InputRR', GDA = '$InputGDA', penunjang = '$InputP', healthEducation = '$InputHe', obat = '$InputO', namaDokter = '$InputDok' where id = '$InputId'");
+         mysqli_query($conn, "UPDATE pemeriksaan SET idPasien = '$InputIP', diagnosa = '$InputDiag', suhu = '$InputSuhu', tanggal = '$InputTgl', tekananDarah = '$InputTd', Spo2 = '$InputS', RR = '$InputRR', GDA = '$InputGDA', penunjang = '$InputP', Tindakan = '$InputT', healthEducation = '$InputHe', obat = '$InputO', namaDokter = '$InputDok' where id = '$InputId'");
          echo "
                <script>
                   setTimeout(function() { 

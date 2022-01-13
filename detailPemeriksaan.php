@@ -115,7 +115,7 @@ $SelectData = query("SELECT * FROM pemeriksaan WHERE id = '$idPem'")[0];
                                         <div class="col-md-5 ml-4">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-address">Obat</label>
-                                                <input id="input-address" class="form-control" name="Tindakan" placeholder="Masukkan Obat..." type="text" value="<?= $SelectData["obat"];?>">
+                                                <input id="input-address" class="form-control" name="obat" placeholder="Masukkan Obat..." type="text" value="<?= $SelectData["obat"];?>">
                                             </div>
                                         </div>
                                 </div>
