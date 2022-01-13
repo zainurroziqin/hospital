@@ -56,7 +56,7 @@ $pasien = query("SELECT * FROM pasien")
                             <td><?= date ('d F Y', strtotime ($row["tanggal"])); ?></td>
                             <td><?= $row["alamat"]; ?></td>
                             <td>
-                                <a href="detailPasien.php">
+                                <a href="detailPasien.php?id=<?=$row["idPasien"];?>">
                                     <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> Detail</button>
                                 </a>
 

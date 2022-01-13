@@ -1,8 +1,13 @@
 <?php
 include 'config/koneksi1.php';
+include 'config/koneksi.php';
 include 'komponen/starting-pages.php';
 include 'komponen/sidebar.php';
 include 'komponen/navbar.php';
+
+
+$idPas = $_GET["id"];
+$SelectData = query("SELECT * FROM pasien WHERE idPasien = '$idPas'")[0];
 ?>
 
 <div class="pcoded-main-container">
@@ -27,28 +32,23 @@ include 'komponen/navbar.php';
             </div>
             <div class="col-sm-12">
                 <div class="card">
-                            <?php
-                                $idPas = $_GET['idPasien'];
-
-                                $SelectData = mysqli_query($koneksi, "SELECT * FROM pasien WHERE idPasien = '$idPas'");
-                                $GetData = mysqli_fetch_array($SelectData);
-                            ?>
+                            
 
                             <form action="#" method="POST" enctype="multipart/form-data" autocomplete="OFF"> 
-                            <input type="hidden" name="idPasien" value="<?php echo $idPas; ?>"></input>
+                            <input type="hidden" name="idPasien" value="<?= $SelectData["idPasien"];?>"></input>
                                 <center><h4 class="heading-small text mb-4 ml-4 mt-5">Data Pasien</h4></center>
                                 <div class="pl-lg-4">
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Nama Pasien</label>
-                                            <input type="text" class="form-control" name="namaPasien" placeholder="Masukkan nama maks. 30 kata" value="<?php echo $GetData['namaPasien']?>">
+                                            <input type="text" class="form-control" name="namaPasien" placeholder="Masukkan nama maks. 30 kata" value="<?= $SelectData["namaPasien"];?>">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                     <div class="form-group">
                                         <label class="form-control-label">Tanggal</label>
-                                        <input type="date" class="form-control" name="tanggal" value="<?php echo $GetData['tanggal']?>">
+                                        <input type="date" class="form-control" name="tanggal" value="<?= $SelectData["tanggal"];?>">
                                     </div>
                                 </div>
                                 </div>
@@ -56,19 +56,19 @@ include 'komponen/navbar.php';
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Jenis Kelamin</label>
-                                            <input type="text" class="form-control" name="tanggal" value="<?php echo $GetData['JenisKelamin']?>">
+                                            <input type="text" class="form-control" name="tanggal" value="<?= $SelectData["JenisKelamin"];?>">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Tanggal Lahir</label>
-                                            <input type="date" class="form-control" name="TanggalLahir" placeholder="Date" value="<?php echo $GetData['tanggalLahir']?>">>
+                                            <input type="date" class="form-control" name="TanggalLahir" placeholder="Date" value="<?= $SelectData["TanggalLahir"];?>">
                                         </div>
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="form-group">
                                             <label class="form-control-label">Usia</label>
-                                            <input type="text" class="form-control" name="umur" placeholder="Maksimal 3 angka" value="<?php echo $GetData['umur']?>">>    
+                                            <input type="text" class="form-control" name="umur" placeholder="Maksimal 3 angka" value="<?= $SelectData["umur"];?>">  
                                         </div>
                                     </div>
                                 </div>
@@ -77,14 +77,14 @@ include 'komponen/navbar.php';
                                         <div class="col-md-5 ml-4">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-address">Alamat</label>
-                                                <input id="input-address" class="form-control" name="alamat" placeholder="Masukkan alamat..." type="text" value="<?php echo $GetData['alamat']?>">>
+                                                <input id="input-address" class="form-control" name="alamat" placeholder="Masukkan alamat..." type="text" value="<?= $SelectData["alamat"];?>">
                                             </div>
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
                                                 <label class="form-control-label">Waktu</label>
-                                                <input id="input-time" class="form-control" name="jam" type="time" value="<?php echo $GetData['jam']?>">
-                                                ">
+                                                <input id="input-time" class="form-control" name="jam" type="time" value="<?= $SelectData["jam"];?>">
+                                                
                                             </div>
                                         </div>
                                 </div>
@@ -96,13 +96,13 @@ include 'komponen/navbar.php';
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-address">Riwayat sekarang</label>
-                                                <input id="input-address" class="form-control" name="riwayatSekarang" placeholder="Riwayat penyakit" type="text" value="<?php echo $GetData['riwayatSekarang']?>">>
+                                                <input id="input-address" class="form-control" name="riwayatSekarang" placeholder="Riwayat penyakit" type="text" value="<?= $SelectData["riwayatSekarang"];?>">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-city">Riwayat dahulu</label>
-                                                <input type="text" id="input-city" class="form-control" name="riwayatDahulu" placeholder="Riwayat penyakit" value="<?php echo $GetData['riwayatDahulu']?>">>
+                                                <input type="text" id="input-city" class="form-control" name="riwayatDahulu" placeholder="Riwayat penyakit" value="<?= $SelectData["riwayatDahulu"];?>">
                                             </div>
                                         </div>
                                     </div>
@@ -110,7 +110,7 @@ include 'komponen/navbar.php';
                                         <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label class="form-control-label">Riwayat obat</label>
-                                                <input type="text" class="form-control" name="riwayatObat" placeholder="Masukkan obat" value="<?php echo $GetData['riwayatObat']?>">>
+                                                <input type="text" class="form-control" name="riwayatObat" placeholder="Masukkan obat" value="<?= $SelectData["riwayatObat"];?>">
                                             </div>
                                         </div>
                                     </div>
