@@ -34,7 +34,7 @@
                      });
                   },10);  
                   window.setTimeout(function(){ 
-                     window.location.replace('detailPemeriksaan.php');
+                     window.location.replace('pemeriksaan.php');
                   },1500);
                </script>
             ";

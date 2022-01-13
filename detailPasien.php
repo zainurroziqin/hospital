@@ -58,7 +58,7 @@ $SelectData = query("SELECT * FROM pasien WHERE idPasien = '$idPas'")[0];
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Jenis Kelamin</label>
-                                            <input type="text" class="form-control" name="tanggal" value="<?= $SelectData["JenisKelamin"];?>">
+                                            <input type="text" class="form-control" name="JenisKelamin" value="<?= $SelectData["JenisKelamin"];?>">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">

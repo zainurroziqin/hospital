@@ -32,7 +32,7 @@
                      });
                   },10);  
                   window.setTimeout(function(){ 
-                     window.location.replace('detailPasien.php');
+                     window.location.replace('pasien.php');
                   },1500);
                </script>
             ";
