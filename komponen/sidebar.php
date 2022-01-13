@@ -29,9 +29,9 @@
                 <li class="nav-item pcoded-menu-caption">
                     <label>Data</label>
                 </li>
-                <li class="nav-item"><a href="#" class="nav-link "><span class="pcoded-micon"><i class="fas fa-user"></i></span><span class="pcoded-mtext">Perawat</span></a></li>
-				<li class="nav-item"><a href="#" class="nav-link "><span class="pcoded-micon"><i class="fas fa-user-injured"></i></span><span class="pcoded-mtext">Pasien</span></a></li>
-				<li class="nav-item"><a href="#" class="nav-link "><span class="pcoded-micon"><i class="fas fa-file-medical"></i></span><span class="pcoded-mtext">Pemeriksaan</span></a></li>
+                <li class="nav-item"><a href="user.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-user"></i></span><span class="pcoded-mtext">User</span></a></li>
+				<li class="nav-item"><a href="pasien.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-user-injured"></i></span><span class="pcoded-mtext">Pasien</span></a></li>
+				<li class="nav-item"><a href="pemeriksaan.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-file-medical"></i></span><span class="pcoded-mtext">Pemeriksaan</span></a></li>
                 <!-- <li class="nav-item"><a href="Logout.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-fw fa-sign-out-alt"></i></span><span class="pcoded-mtext">Logout</span></a></li> -->
                 
             </ul>

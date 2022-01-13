@@ -1,13 +1,17 @@
+
     <script src="assets/js/vendor-all.min.js"></script>
     <script src="assets/js/plugins/bootstrap.min.js"></script>
     <script src="assets/js/ripple.js"></script>
     <script src="assets/js/pcoded.min.js"></script>
-	<script src="assets/js/menu-setting.min.js"></script>
+    <script src="assets/js/menu-setting.min.js"></script>
 
-<script src="assets/js/plugins/jquery.dataTables.min.js"></script>
-<script src="assets/js/plugins/dataTables.bootstrap4.min.js"></script>
-<!-- Apex Chart -->
-<script src="assets/js/plugins/apexcharts.min.js"></script>
+    <script src="assets/js/plugins/jquery.dataTables.min.js"></script>
+    <script src="assets/js/plugins/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/pages/data-basic-custom.js"></script>
+    <!-- Apex Chart -->
+    <script src="assets/js/plugins/apexcharts.min.js"></script>
+    <script src="assets/js/pages/todo.js"></script>
+    <script src="assets/alert/sweetalert2.all.min.js" ></script>
 <script>
     // report model start
     $('#modal-report').on('show.bs.modal', function(event) {
