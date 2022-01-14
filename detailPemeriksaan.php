@@ -33,6 +33,7 @@ $SelectData = query("SELECT * FROM pemeriksaan WHERE id = '$idPem'")[0];
 
                             <form action="updatePemeriksaan.php" method="POST" enctype="multipart/form-data" autocomplete="OFF"> 
                                 <center><h4 class="heading-small text mb-4 ml-4 mt-5">Data Pemeriksaan</h4></center>
+                                <input type="hidden" name="id" value="<?= $SelectData["id"];?>"></input>
                                 <div class="pl-lg-4">
                                 <div class="row">
                                     <div class="col-lg-2">
