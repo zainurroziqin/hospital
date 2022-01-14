@@ -15,7 +15,7 @@
 			});
 		},10);  
 		window.setTimeout(function(){ 
-			window.location.replace('pasien.php');
+			window.location.replace('pemeriksaan.php');
 		},1500);
 		</script>
       ";

@@ -14,11 +14,11 @@ $Pemeriksaan = query("SELECT * FROM pemeriksaan")
                 <div class="row align-items-center">
                     <div class="col-md-12">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Pemeriksaan</h5>
+                            <h5 class="m-b-10">Hasil Pemeriksaan</h5>
                         </div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="dashboard.php"><i class="feather icon-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#!">Pemeriksaan</a></li>
+                            <li class="breadcrumb-item"><a href="#!">Hasil Pemeriksaan</a></li>
                             <!-- <li class="breadcrumb-item"><a href="#!">Basic Initialization</a></li> -->
                         </ul>
                     </div>
@@ -36,9 +36,17 @@ $Pemeriksaan = query("SELECT * FROM pemeriksaan")
                                     <th>No</th>
                                     <th>Id Pasien</th>
                                     <th>Tanggal</th>
+                                    <th>Diagnosa</th>
+                                    <th>Suhu</th>
+                                    <th>Tekanan Darah</th>
+                                    <th>Spo2</th>
+                                    <th>RR</th>
+                                    <th>GDA</th>
+                                    <th>Penunjang</th>
+                                    <th>Tindakan</th>
+                                    <th>Health Education</th>
+                                    <th>Obat</th>
                                     <th>Diperiksa Oleh</th>
-                                    <th>Opsi</th>
-                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -48,16 +56,18 @@ $Pemeriksaan = query("SELECT * FROM pemeriksaan")
                             <td><?=$i; ?></td>
                             <td><?= $row["idPasien"]; ?></td>
                             <td><?= $row["tanggal"]; ?></td>
+                            <td><?= $row["diagnosa"]; ?></td>
+                            <td><?= $row["suhu"]; ?></td>
+                            <td><?= $row["tekananDarah"]; ?></td>
+                            <td><?= $row["Spo2"]; ?></td>
+                            <td><?= $row["RR"]; ?></td>
+                            <td><?= $row["GDA"]; ?></td>
+                            <td><?= $row["penunjang"]; ?></td>
+                            <td><?= $row["Tindakan"]; ?></td>
+                            <td><?= $row["healthEducation"]; ?></td>
+                            <td><?= $row["obat"]; ?></td>
                             <td><?= $row["namaDokter"]; ?></td>
-                            <td>
-                                <a href="detailPemeriksaan.php">
-                                    <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> Detail</button>
-                                </a>
-
-                                <a href="hapusPemeriksaan.php">
-                                    <button type="button" class="btn btn-danger btn-sm tombol-hapus"><i class="fas fa-trash"></i> Hapus</button>
-                                </a>
-                            </td>
+                            
                             </tr>
                             <?php $i ++; ?>
                         <?php endforeach; ?>

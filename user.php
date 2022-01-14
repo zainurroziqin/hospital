@@ -63,7 +63,7 @@ $user = query("SELECT * FROM user")
                                     <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> Detail</button>
                                 </a>
 
-                                <a href="hapusUser.php">
+                                <a href="hapusUser.php?username=<?=$row["username"];?>">
                                     <button type="button" class="btn btn-danger btn-sm tombol-hapus"><i class="fas fa-trash"></i> Hapus</button>
                                 </a>
                             </td>

@@ -2,6 +2,11 @@
 	require "config/koneksi.php";
 
 	$User = $_GET['username'];
+	$SelectData = mysqli_query($conn, "SELECT * FROM user WHERE username = '$User'");
+	$GetDataIMG = mysqli_fetch_array($SelectData);
+	$RemoveIMG = unlink("assets/images/user/$GetDataIMG[image]");
+
+	if ($RemoveIMG) {
 
 	mysqli_query($conn, "DELETE FROM user WHERE username = '$User'");
 
@@ -19,6 +24,6 @@
 		},1500);
 		</script>
       ";
-	
+	}
 ?>
 <script src="../../../package/sweetalert2.all.min.js"></script>
