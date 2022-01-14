@@ -1,7 +1,11 @@
 <?php
+include 'config/koneksi.php';
 include 'komponen/starting-pages.php';
 include 'komponen/sidebar.php';
 include 'komponen/navbar.php';
+
+$id = $_GET["id"];
+$Data = query("SELECT * FROM pasien WHERE idPasien = '$id'")[0];
 ?>
 
 <div class="pcoded-main-container">
@@ -34,7 +38,7 @@ include 'komponen/navbar.php';
                                     <div class="col-lg-2">
                                         <div class="form-group">
                                             <label class="form-control-label">ID Pasien</label>
-                                            <input type="text" class="form-control" name="idPasien" placeholder="Auto">
+                                            <input type="text" class="form-control" name="idPasien" placeholder="Auto" value="<?= $Data["idPasien"];?>" readonly>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">

@@ -33,7 +33,7 @@
 						});
 					},10);  
 					window.setTimeout(function(){ 
-						window.location.replace('pasien.php');
+						window.location.replace('tambahPemeriksaan.php?id=$InputId');
 					},1500);
 				</script>
 			";

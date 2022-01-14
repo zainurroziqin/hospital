@@ -50,7 +50,7 @@ $Pemeriksaan = query("SELECT * FROM pemeriksaan")
                             <td><?= $row["tanggal"]; ?></td>
                             <td><?= $row["namaDokter"]; ?></td>
                             <td>
-                                <a href="detailPemeriksaan.php">
+                                <a href="detailPemeriksaan.php?id=<?= $row["id"];?>">
                                     <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> Detail</button>
                                 </a>
 

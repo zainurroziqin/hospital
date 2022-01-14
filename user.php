@@ -59,7 +59,7 @@ $user = query("SELECT * FROM user")
                             <td><?= $row["fullname"]; ?></td>
                             <td><?= $row["username"]; ?></td>
                             <td>
-                                <a href="detailUser.php">
+                                <a href="detailUser.php?username=<?=$row["username"];?>">
                                     <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> Detail</button>
                                 </a>
 
