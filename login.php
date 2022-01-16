@@ -44,11 +44,36 @@ if (isset($_POST['submit'])) {
 			";
 			}else{
 				$error = 'user tidak ditemukan!!';
-				header('Location: login.php');
+				echo "
+				<script>
+					setTimeout(function() { 
+						Swal.fire({
+							title: 'Gagal Login!',
+							text: 'Password salah',
+							icon: 'error',
+						});
+					},10);
+					window.setTimeout(function(){ 
+						window.location.replace('login.php');
+					},3000);
+				</script>
+				";
 			}
 		}else{
 			$error = 'user tidak ditemukan';
-			header('Location: login.php');
+			echo "<script>
+				setTimeout(function() { 
+					Swal.fire({
+						title: 'Gagal Login!',
+						text: 'Username tidak ada',
+						icon: 'error',
+					});
+				},10);
+				window.setTimeout(function(){ 
+					window.location.replace('login.php');
+				},3000);
+			</script>
+			";
 		}
 	}else{
 		echo "

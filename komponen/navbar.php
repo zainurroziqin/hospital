@@ -13,7 +13,7 @@
 					</a>
 				</div>
 				<div class="collapse navbar-collapse">
-					<ul class="navbar-nav mr-auto">
+					<!-- <ul class="navbar-nav mr-auto">
 						<li class="nav-item">
 							<a href="#!" class="pop-search"><i class="feather icon-search"></i></a>
 							<div class="search-bar">
@@ -23,10 +23,10 @@
 								</button>
 							</div>
 						</li>
-					</ul>
+					</ul> -->
 					<ul class="navbar-nav ml-auto">
 						<li>
-							<div class="dropdown">
+							<!-- <div class="dropdown">
 								<a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon feather icon-bell"></i></a>
 								<div class="dropdown-menu dropdown-menu-right notification">
 									<div class="noti-head">
@@ -84,7 +84,7 @@
 										<a href="#!">show all</a>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</li>
 						<li>
 							<div class="dropdown drp-user">
@@ -93,16 +93,16 @@
 								</a>
 								<div class="dropdown-menu dropdown-menu-right profile-notification">
 									<div class="pro-head">
-										<img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
-										<span>John Doe</span>
-										<a href="auth-signin.html" class="dud-logout" title="Logout">
+									<i><i class="fas fa-user"></i></i>
+                            		&nbsp;
+                            		<span><?php echo $_SESSION['Name' ] ; ?> </span>
+										<!-- <a href="auth-signin.html" class="dud-logout" title="Logout">
 											<i class="feather icon-log-out"></i>
-										</a>
+										</a> -->
 									</div>
 									<ul class="pro-body">
-										<li><a href="user-profile.html" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
-										<li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
-										<li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
+										<li><a href="logout.php" class="dropdown-item"><i class="fas fa-fw fa-sign-out-alt"></i> Keluar</a></li>
+									
 									</ul>
 								</div>
 							</div>
