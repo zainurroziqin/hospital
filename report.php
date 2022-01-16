@@ -39,7 +39,7 @@ $Pemeriksaan = query("SELECT * FROM pemeriksaan")
             <div class="card">
                 <div class="card-body">
                     <div class="dt-responsive table-responsive">
-                        <table id="simpletable" class="table table-striped table-bordered nowrap">
+                        <table id="tbl_exporttable_to_xls" class="table table-striped table-bordered nowrap">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -85,11 +85,33 @@ $Pemeriksaan = query("SELECT * FROM pemeriksaan")
                         </table>
                     </div>
                 </div>
+                <div class="mt-2 mb-2 ml-3 ">
+                    <button type="button"  class="btn btn-danger mr-4" onclick = "ExportToExcel('xlsx')"><i class="fas fa-edit" ></i> Export Excel</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<!-- script -->
+<script src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+<script>
+   function ExportToExcel(type, fn, dl) {
+      var elt = document.getElementById('tbl_exporttable_to_xls');
+      var wb = XLSX.utils.table_to_book(elt, {
+         sheet: "sheet1",
+         dateNF: 'dd-mm-yyyy'
+      });
+      return dl ?
+      XLSX.write(wb, {
+         bookType: type,
+         bookSST: true,
+         type: 'base64'
+      }) :
+      XLSX.writeFile(wb, fn || ('Hasil Pemeriksaan.' + (type || 'xlsx')));
+   }
+</script>
 
 <?php
+
 include 'komponen/closing-pages.php';
 ?>
