@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['Name'])) {
+if (!isset($_SESSION['ID'])) {
   echo "
     <script>
       alert('Harap login terlebih dahulu sebelum mengakses halaman ini!');

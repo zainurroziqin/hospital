@@ -1,5 +1,14 @@
 <?php 
 include 'config/koneksi.php';
+session_start();
+if (!isset($_SESSION['ID'])) {
+  echo "
+    <script>
+      alert('Harap login terlebih dahulu sebelum mengakses halaman ini!');
+      document.location.href = 'login.php';
+    </script>
+  ";
+}
 include 'komponen/starting-pages.php';
 include 'komponen/sidebar.php';
 include 'komponen/navbar.php';

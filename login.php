@@ -17,11 +17,14 @@ if (isset($_POST['submit'])) {
 			$userVal = $row['username'];
 			$passVal = $row['password'];
 			$userName = $row['fullname'];
+			$imageF = $row['image'];
 			//$level = $row['level'];
 		}
 		if ($num != 0) {
 			if ($userVal==$email && $passVal==$pass) {
+				$_SESSION['ID'] = $userVal;
 				$_SESSION['Name'] = $userName;
+				$_SESSION['image'] = $imageF;
 				//$_SESSION['level'] = $level;
 				//$_SESSION['email'] = $userEmail;
 				//header('Location: dashboard.php');
@@ -30,13 +33,13 @@ if (isset($_POST['submit'])) {
 					setTimeout(function() { 
 						Swal.fire({
 							title: 'Berhasil Login!',
-							text: 'Selamat datang, $userName',
+							text: 'Selamat Datang $userName',
 							icon: 'success',
 						});
-					},10);  
+					},10);
 					window.setTimeout(function(){ 
 						window.location.replace('dashboard.php');
-					},1500);
+					},2500);
 				</script>
 			";
 			}else{
@@ -125,7 +128,7 @@ if (isset($_POST['submit'])) {
 <!-- [ auth-signin ] end -->
 
 <?php 
-	include 'komponen/closing-pages.php'
+	include 'komponen/closing-pages.php';
 ?>
 
 <!-- Required Js -->
