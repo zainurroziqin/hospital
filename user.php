@@ -14,11 +14,11 @@ $user = query("SELECT * FROM user")
                 <div class="row align-items-center">
                     <div class="col-md-12">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">user</h5>
+                            <h5 class="m-b-10">User</h5>
                         </div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="dashboard.php"><i class="feather icon-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#!">user</a></li>
+                            <li class="breadcrumb-item"><a href="#!">User</a></li>
                             <!-- <li class="breadcrumb-item"><a href="#!">Basic Initialization</a></li> -->
                         </ul>
                     </div>
@@ -31,7 +31,7 @@ $user = query("SELECT * FROM user")
                 <div class="card-header">
                     <!-- <h5>Kandang A</h5> -->
                     <a href="tambahUser.php">
-                        <button type="button" class="btn btn-warning"><i class="feather mr-2 icon-plus"></i>Tambah Data user</button>
+                        <button type="button" class="btn btn-warning"><i class="feather mr-2 icon-plus"></i>Tambah Data User</button>
                         </a>
                 </div>
                 <div class="card-body">

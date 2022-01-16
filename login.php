@@ -1,77 +1,68 @@
 <?php 
-include "config/koneksi.php";
+require ('config/koneksi.php');
 
 session_start();
 
-if(isset($_SESSION["login"])){
-	// header ("Location: Dashboard.php");
-}
 
+if (isset($_POST['submit'])) {
+	$email = $_POST['txt_email'];
+	$pass = $_POST['txt_pass'];
 
-if (isset($_POST["submit"])) {
+	if (!empty(trim($email)) && !empty(trim($pass))) {
+		$query = "SELECT * FROM user WHERE username = '$email'";
+		$result = mysqli_query($conn, $query);
+		$num = mysqli_num_rows($result);
 
-	$username = $_POST["username"];
-	$password = $_POST["password"];
-
-	$result = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
-	
- 	
-	// cek username
-	if (mysqli_num_rows($result) === 1) {
-
-		// cek password
-
-		$row = mysqli_fetch_assoc($result);
-		if (password_verify($password, $row["password"]) ){
-			$_SESSION["login"] = true;
-			$_SESSION['username'] = $username;
-			$_SESSION['password'] = $password;
-			$_SESSION['nama'] = $row['nama'];           
-            echo "
-            <script>
-                setTimeout(function() { 
-                    Swal.fire({
-                        title: 'Berhasil Login!',
-                        text: 'Selamat Datang $username',
-                        icon: 'success',
-                    });
-                },10);
-                window.setTimeout(function(){ 
-                    window.location.replace('dashboard.php');
-                },2500);
-            </script>";
+		while ($row = mysqli_fetch_array($result)) {
+			$userVal = $row['username'];
+			$passVal = $row['password'];
+			$userName = $row['fullname'];
+			//$level = $row['level'];
+		}
+		if ($num != 0) {
+			if ($userVal==$email && $passVal==$pass) {
+				$_SESSION['Name'] = $userName;
+				//$_SESSION['level'] = $level;
+				//$_SESSION['email'] = $userEmail;
+				//header('Location: dashboard.php');
+        echo "
+				<script>
+					setTimeout(function() { 
+						Swal.fire({
+							title: 'Berhasil Login!',
+							text: 'Selamat datang, $userName',
+							icon: 'success',
+						});
+					},10);  
+					window.setTimeout(function(){ 
+						window.location.replace('dashboard.php');
+					},1500);
+				</script>
+			";
+			}else{
+				$error = 'user tidak ditemukan!!';
+				header('Location: login.php');
+			}
 		}else{
-			echo "
-            <script>
-                setTimeout(function() { 
-                    Swal.fire({
-                        title: 'Gagal Login!',
-                        text: 'Password salah',
-                        icon: 'error',
-                    });
-                },10);
-                window.setTimeout(function(){ 
-                    window.location.replace('login.php');
-                },3000);
-            </script>";
+			$error = 'user tidak ditemukan';
+			header('Location: login.php');
 		}
 	}else{
 		echo "
 				<script>
 					setTimeout(function() { 
 						Swal.fire({
-							title: 'Gagal Login!',
-							text: 'Username tidak ada',
+							title: 'Data tidak boleh kosong!',
+							
 							icon: 'error',
 						});
-					},10);
+					},10);  
 					window.setTimeout(function(){ 
-						window.location.replace('login.php');
-					},3000);
-				</script>";
+						window.location.replace('dashboard.php');
+					},1500);
+				</script>
+			";
 	}
-
-	$error = true;
 }
 ?>
 
@@ -115,11 +106,11 @@ if (isset($_POST["submit"])) {
 						<h4 class="mb-3 f-w-400">Signin</h4>
 						<div class="form-group mb-3">
 							<label class="floating-label">Username</label>
-							<input type="text" class="form-control" placeholder="" name="username">
+							<input type="text" class="form-control" placeholder="" name="txt_email">
 						</div>
 						<div class="form-group mb-4">
 							<label class="floating-label" for="Password">Password</label>
-							<input type="password" class="form-control" name="password" placeholder="">
+							<input type="password" class="form-control" name="txt_pass" placeholder="">
 						</div>
 						<button type="submit" class="btn btn-block btn-primary mb-4" name="submit">Masuk</button>
 						<p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html" class="f-w-400">Reset</a></p>
