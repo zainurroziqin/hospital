@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config/koneksi.php';
 include 'komponen/starting-pages.php';
 include 'komponen/sidebar.php';
@@ -87,8 +88,15 @@ $SelectData = query("SELECT * FROM pemeriksaan WHERE id = '$idPem'")[0];
                                         </div>
                                         <div class="col-md-5 ml-4">
                                             <div class="form-group">
-                                                <label class="form-control-label" for="input-address">GDA</label>
-                                                <input id="input-address" class="form-control" name="GDA" placeholder="Masukkan GDA..." type="text" value="<?= $SelectData["GDA"];?>">
+                                                <label class="form-control-label" for="input-address">Golongan Darah</label>
+                                                <!-- <input id="input-address" class="form-control" name="GDA" placeholder="Masukkan GDA..." type="text" value="<? //$SelectData["GDA"];?>"> -->
+                                                <select name="GDA" class="custom-select">
+                                                    <option value="">- Pilih Gologan Darah-</option>
+                                                    <option value="A" <?php if ($SelectData['GDA'] == 'A') {echo "selected";} ?>>A</option>
+                                                    <option value="B" <?php if ($SelectData['GDA'] == 'B') {echo "selected";} ?>>B</option>
+                                                    <option value="O" <?php if ($SelectData['GDA'] == 'O') {echo "selected";} ?>>O</option>
+                                                    <option value="AB" <?php if ($SelectData['GDA'] == 'AB') {echo "selected";} ?>>AB</option>
+                                                </select>
                                             </div>
                                         </div>
                                 </div>

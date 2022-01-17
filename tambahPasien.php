@@ -1,8 +1,13 @@
 <?php
+
+session_start();
+
 include 'config/koneksi.php';
 include 'komponen/starting-pages.php';
 include 'komponen/sidebar.php';
 include 'komponen/navbar.php';
+
+
 $GetTableGT = mysqli_query($conn, "SELECT MAX(idPasien) AS KodePS FROM pasien");
 $GetKodeGT = mysqli_fetch_array($GetTableGT);
 $GetMaxValue = $GetKodeGT['KodePS'];
@@ -50,7 +55,7 @@ $GenerateKodeGT = $SetCharKodeGT."-". sprintf("%03s", $SetNumberKodeGT);
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Nama Pasien</label>
-                                            <input type="text" class="form-control" name="namaPasien" placeholder="Masukkan nama maks. 30 kata">
+                                            <input type="text" class="form-control" name="namaPasien" oninput="this.value=this.value.replace(/[^a-z A-Z]/, '')" placeholder="Masukkan nama maks. 30 kata">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
@@ -80,7 +85,7 @@ $GenerateKodeGT = $SetCharKodeGT."-". sprintf("%03s", $SetNumberKodeGT);
                                     <div class="col-lg-2">
                                         <div class="form-group">
                                             <label class="form-control-label">Usia</label>
-                                            <input type="text" class="form-control" name="umur" placeholder="Maksimal 3 angka">    
+                                            <input type="text" class="form-control" name="umur" maxlength="3" oninput="this.value=this.value.replace(/[^0-9.]/, '')" placeholder="Maksimal 3 angka">    
                                         </div>
                                     </div>
                                 </div>

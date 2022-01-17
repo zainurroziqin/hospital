@@ -37,10 +37,19 @@ $Pemeriksaan = query("SELECT * FROM pemeriksaan")
 
         <div class="col-sm-12">
             <div class="card">
+                <div class="mt-2 mb-2 ml-3 ">
+                    <button type="button"  class="btn btn-danger mr-4" onclick = "ExportToExcel('xlsx')"><i class="fas fa-edit" ></i> Export Excel</button>
+                </div>
                 <div class="card-body">
                     <div class="dt-responsive table-responsive">
                         <table id="tbl_exporttable_to_xls" class="table table-striped table-bordered nowrap">
                             <thead>
+                                <tr>
+                                    <td colspan = "21" align="center">    <h3 >LAPORAN HASIL PEMERIKSAAN</h3></td>
+                                </tr>
+                                <tr>
+                                    <td colspan ="21" align="center"><h4>DOKUMENT NURSING INDIVIDUAL</h4></td>
+                                <tr>
                                 <tr>
                                     <th>No</th>
                                     <th>Id Pasien</th>
@@ -84,9 +93,6 @@ $Pemeriksaan = query("SELECT * FROM pemeriksaan")
                             
                         </table>
                     </div>
-                </div>
-                <div class="mt-2 mb-2 ml-3 ">
-                    <button type="button"  class="btn btn-danger mr-4" onclick = "ExportToExcel('xlsx')"><i class="fas fa-edit" ></i> Export Excel</button>
                 </div>
             </div>
         </div>

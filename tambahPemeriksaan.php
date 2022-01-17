@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config/koneksi.php';
 include 'komponen/starting-pages.php';
 include 'komponen/sidebar.php';
@@ -58,7 +59,7 @@ $Data = query("SELECT * FROM pasien WHERE idPasien = '$id'")[0];
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Suhu</label>
-                                            <input type="text" class="form-control" name="suhu" placeholder="Masukkan suhu maks. 2 angka">
+                                            <input type="text" class="form-control" oninput="this.value=this.value.replace(/[^0-9]/, '')" maxlength="2" name="suhu" placeholder="Masukkan suhu maks. 2 angka">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
@@ -86,8 +87,15 @@ $Data = query("SELECT * FROM pasien WHERE idPasien = '$id'")[0];
                                         </div>
                                         <div class="col-md-5 ml-4">
                                             <div class="form-group">
-                                                <label class="form-control-label" for="input-address">GDA</label>
-                                                <input id="input-address" class="form-control" name="GDA" placeholder="Masukkan GDA..." type="text">
+                                                <label class="form-control-label" for="input-address">Golongan Darah</label>
+                                                <!-- <input id="input-address" class="form-control" name="GDA" placeholder="Masukkan GDA..." type="text"> -->
+                                                <select name="GDA" class="custom-select">
+                                                    <option value="">- Pilih Gologan Darah-</option>
+                                                    <option value="A">A</option>
+                                                    <option value="B">B</option>
+                                                    <option value="O">O</option>
+                                                    <option value="AB">AB</option>
+                                                </select>
                                             </div>
                                         </div>
                                 </div>
@@ -123,7 +131,7 @@ $Data = query("SELECT * FROM pasien WHERE idPasien = '$id'")[0];
                                         <div class="col-md-5 ml-4">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-address">Nama Dokter</label>
-                                                <input id="input-address" class="form-control" name="namaDokter" placeholder="Masukkan Nama Dokter..." type="text">
+                                                <input id="input-address" class="form-control" name="namaDokter" value="<?php echo $_SESSION['Name']; ?>"  readonly placeholder="Masukkan Nama Dokter..." type="text">
                                             </div>
                                         </div>
                                 </div>

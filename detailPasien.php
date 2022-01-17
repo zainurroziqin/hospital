@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config/koneksi.php';
 include 'komponen/starting-pages.php';
 include 'komponen/sidebar.php';
@@ -119,10 +120,10 @@ $SelectData = query("SELECT * FROM pasien WHERE idPasien = '$idPas'")[0];
                                 </div>
                                 <hr class="my-4" />
                                 <!-- Description -->
-                                <center><h6 class="heading-small text-muted mb-4">Setelah selesai menginput data tekan tombol perbarui</h6>
+                                <center><h6 class="heading-small text-muted mb-4">Setelah selesai menginput data tekan tombol Simpan</h6>
                                 <div class="col-md-12 ml">
                                                     
-                                    <button class="btn btn-sm btn-success" type="submit"> Perbarui Data Pasien </button>
+                                    <button class="btn btn-sm btn-success" type="submit"> PERIKSA </button>
                                 </div></center>
                             </form>
                     </div>

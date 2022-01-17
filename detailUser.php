@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config/koneksi.php';
 include 'komponen/starting-pages.php';
 include 'komponen/sidebar.php';
