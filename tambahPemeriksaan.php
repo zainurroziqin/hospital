@@ -60,13 +60,13 @@ $tanggal = date("Y-m-d");
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Suhu</label>
-                                            <input type="text" class="form-control" oninput="this.value=this.value.replace(/[^0-9]/, '')" maxlength="2" name="suhu" placeholder="Masukkan suhu maks. 2 angka">
+                                            <input type="text" class="form-control" oninput="this.value=this.value.replace(/[^0-9,]/, '')" maxlength="5" name="suhu" placeholder="Masukkan suhu maks. 2 angka">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Tekanan Darah</label>
-                                            <input type="text" class="form-control" name="tekananDarah" placeholder="Masukkan maks. 10 kata">
+                                            <input type="text" class="form-control" name="tekananDarah" oninput="this.value=this.value.replace(/[^0-9]/, '')" maxlength="5" placeholder="Masukkan tekanan darah">
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@ $tanggal = date("Y-m-d");
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Spo2</label>
-                                            <input type="text" class="form-control" name="Spo2" placeholder="Maksimal 50 kata">    
+                                            <input type="text" class="form-control" name="Spo2" oninput="this.value=this.value.replace(/[^0-9]/, '')" maxlength="5" placeholder="Maksimal 50 kata">    
                                         </div>
                                     </div>
                                 </div>
@@ -83,20 +83,20 @@ $tanggal = date("Y-m-d");
                                         <div class="col-md-5 ml-4">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-address">RR</label>
-                                                <input id="input-address" class="form-control" name="RR" placeholder="Masukkan RR..." type="text">
+                                                <input id="input-address" class="form-control" name="RR" oninput="this.value=this.value.replace(/[^0-9]/, '')" maxlength="5" placeholder="Masukkan RR..." type="text">
                                             </div>
                                         </div>
                                         <div class="col-md-5 ml-4">
                                             <div class="form-group">
-                                                <label class="form-control-label" for="input-address">Golongan Darah</label>
-                                                <!-- <input id="input-address" class="form-control" name="GDA" placeholder="Masukkan GDA..." type="text"> -->
-                                                <select name="GDA" class="custom-select">
+                                                <label class="form-control-label" for="input-address">GDA</label>
+                                                <input id="input-address" class="form-control" name="GDA" oninput="this.value=this.value.replace(/[^0-9]/, '')" maxlength="5" placeholder="Masukkan GDA..." type="text">
+                                                <!-- <select name="GDA" class="custom-select">
                                                     <option value="">- Pilih Gologan Darah-</option>
                                                     <option value="A">A</option>
                                                     <option value="B">B</option>
                                                     <option value="O">O</option>
                                                     <option value="AB">AB</option>
-                                                </select>
+                                                </select> -->
                                             </div>
                                         </div>
                                 </div>
