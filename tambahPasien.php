@@ -62,7 +62,7 @@ $tanggal = date("Y-m-d");
                                     <div class="col-lg-4">
                                     <div class="form-group">
                                         <label class="form-control-label">Tanggal</label>
-                                        <input type="date" class="form-control" name="tanggal" value="<?php echo $tanggal ?>">
+                                        <input type="date" class="form-control" name="tanggal" value="<?php echo $tanggal ?>" readonly>
                                     </div>
                                 </div>
                                 </div>
@@ -102,7 +102,7 @@ $tanggal = date("Y-m-d");
                                             <div class="form-group">
                                                 <label class="form-control-label">Waktu</label>
                                                 <input  class="form-control" name="jam" type="text" value="<?php date_default_timezone_set('Asia/Jakarta');
-                                                echo date('H:i'); ?>">
+                                                echo date('H:i'); ?>" readonly>
                                             </div>
                                         </div>
                                 </div>
@@ -135,10 +135,10 @@ $tanggal = date("Y-m-d");
                                 </div>
                                 <hr class="my-4" />
                                 <!-- Description -->
-                                <center><h6 class="heading-small text-muted mb-4">Setelah selesai menginput data tekan tombol simpan</h6>
+                                <center><h6 class="heading-small text-muted mb-4">Setelah selesai menginput data tekan tombol simpan untuk pemeriksaan</h6>
                                 <div class="col-md-12 ml">
                                                     
-                                    <button class="btn btn-sm btn-success" type="submit"> Simpan Data Pasien </button>
+                                    <button class="btn btn-sm btn-success" type="submit"> Simpan & Periksa </button>
                                 </div></center>
                             </form>
                     </div>
