@@ -52,7 +52,7 @@ $SelectData = query("SELECT * FROM pemeriksaan WHERE id = '$idPem'")[0];
                                     <div class="col-lg-4">
                                     <div class="form-group">
                                         <label class="form-control-label">Tanggal</label>
-                                        <input type="date" class="form-control" name="tanggal" value="<?= $SelectData["tanggal"];?>">
+                                        <input type="date" class="form-control" name="tanggal" value="<?= $SelectData["tanggalPeriksa"];?>">
                                     </div>
                                 </div>
                                 </div>

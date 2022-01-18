@@ -17,6 +17,7 @@ $SetNumberKodeGT++;
 $SetCharKodeGT = "PAS";
 
 $GenerateKodeGT = $SetCharKodeGT."-". sprintf("%03s", $SetNumberKodeGT);
+$tanggal = date("Y-m-d");
 ?>
 
 <div class="pcoded-main-container">
@@ -61,7 +62,7 @@ $GenerateKodeGT = $SetCharKodeGT."-". sprintf("%03s", $SetNumberKodeGT);
                                     <div class="col-lg-4">
                                     <div class="form-group">
                                         <label class="form-control-label">Tanggal</label>
-                                        <input type="date" class="form-control" name="tanggal">
+                                        <input type="date" class="form-control" name="tanggal" value="<?php echo $tanggal ?>">
                                     </div>
                                 </div>
                                 </div>
@@ -100,9 +101,8 @@ $GenerateKodeGT = $SetCharKodeGT."-". sprintf("%03s", $SetNumberKodeGT);
                                         <div class="col-md-2">
                                             <div class="form-group">
                                                 <label class="form-control-label">Waktu</label>
-                                                <input id="input-time" class="form-control" name="jam" type="time" value="<?php date_default_timezone_set('Asia/Jakarta');
-                                                echo date('H:i'); ?>
-                                                ">
+                                                <input  class="form-control" name="jam" type="text" value="<?php date_default_timezone_set('Asia/Jakarta');
+                                                echo date('H:i'); ?>">
                                             </div>
                                         </div>
                                 </div>

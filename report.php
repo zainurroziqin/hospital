@@ -13,7 +13,7 @@ include 'komponen/starting-pages.php';
 include 'komponen/sidebar.php';
 include 'komponen/navbar.php';
 
-$Pemeriksaan = query("SELECT * FROM pemeriksaan")
+$Pemeriksaan = query("SELECT pasien.*, pemeriksaan.* FROM pasien INNER JOIN pemeriksaan ON pasien.idPasien = pemeriksaan.idPasien")
 ?>
 <div class="pcoded-main-container">
     <div class="pcoded-content">
@@ -52,8 +52,18 @@ $Pemeriksaan = query("SELECT * FROM pemeriksaan")
                                 <tr>
                                 <tr>
                                     <th>No</th>
-                                    <th>Id Pasien</th>
-                                    <th>Tanggal</th>
+                                    <th>ID Pasien</th>
+                                    <th>Tanggal Masuk</th>
+                                    <th>Nama Pasien</th>
+                                    <th>Alamat</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Tanggal Lahir</th>
+                                    <th>Umur</th>
+                                    <th>Riwayat Sekarang</th>
+                                    <th>Riwayat Dahulu</th>
+                                    <th>Riwayat Obat</th>
+                                    <th>Jam</th>
+                                    <th>Tanggal Periksa</th>
                                     <th>Diagnosa</th>
                                     <th>Suhu</th>
                                     <th>Tekanan Darah</th>
@@ -74,6 +84,16 @@ $Pemeriksaan = query("SELECT * FROM pemeriksaan")
                             <td><?=$i; ?></td>
                             <td><?= $row["idPasien"]; ?></td>
                             <td><?= $row["tanggal"]; ?></td>
+                            <td><?= $row["namaPasien"]; ?></td>
+                            <td><?= $row["alamat"]; ?></td>
+                            <td><?= $row["JenisKelamin"]; ?></td>
+                            <td><?= $row["TanggalLahir"]; ?></td>
+                            <td><?= $row["umur"]; ?></td>
+                            <td><?= $row["riwayatSekarang"]; ?></td>
+                            <td><?= $row["riwayatDahulu"]; ?></td>
+                            <td><?= $row["riwayatObat"]; ?></td>
+                            <td><?= $row["jam"]; ?></td>
+                            <td><?= $row["tanggalPeriksa"]; ?></td>
                             <td><?= $row["diagnosa"]; ?></td>
                             <td><?= $row["suhu"]; ?></td>
                             <td><?= $row["tekananDarah"]; ?></td>

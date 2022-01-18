@@ -56,7 +56,7 @@ $Pemeriksaan = query("SELECT * FROM pemeriksaan")
                         <?php foreach ($Pemeriksaan as $row ): ?>
                             <td><?=$i; ?></td>
                             <td><?= $row["idPasien"]; ?></td>
-                            <td><?= $row["tanggal"]; ?></td>
+                            <td><?= $row["tanggalPeriksa"]; ?></td>
                             <td><?= $row["namaDokter"]; ?></td>
                             <td>
                                 <a href="detailPemeriksaan.php?id=<?= $row["id"];?>">

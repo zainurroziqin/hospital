@@ -7,6 +7,7 @@ include 'komponen/navbar.php';
 
 $id = $_GET["id"];
 $Data = query("SELECT * FROM pasien WHERE idPasien = '$id'")[0];
+$tanggal = date("Y-m-d");
 ?>
 
 <div class="pcoded-main-container">
@@ -51,7 +52,7 @@ $Data = query("SELECT * FROM pasien WHERE idPasien = '$id'")[0];
                                     <div class="col-lg-4">
                                     <div class="form-group">
                                         <label class="form-control-label">Tanggal</label>
-                                        <input type="date" class="form-control" name="tanggal">
+                                        <input type="date" class="form-control" name="tanggal" value="<?php echo $tanggal ?>" readonly>
                                     </div>
                                 </div>
                                 </div>

@@ -24,7 +24,7 @@
    }
    
    else {
-      mysqli_query($conn, "INSERT INTO pemeriksaan (idPasien, diagnosa, suhu, tanggal, tekananDarah, Spo2, RR, GDA, penunjang, Tindakan, healthEducation, obat, namaDokter) VALUES ('$InputId', '$InputDiag', '$InputSuhu', '$InputTgl', '$InputTd', '$InputS', '$InputRR', '$InputGDA', '$InputP', '$InputT', '$InputHe', '$InputO', '$InputDok')");
+      mysqli_query($conn, "INSERT INTO pemeriksaan (idPasien, diagnosa, suhu, tanggalPeriksa, tekananDarah, Spo2, RR, GDA, penunjang, Tindakan, healthEducation, obat, namaDokter) VALUES ('$InputId', '$InputDiag', '$InputSuhu', '$InputTgl', '$InputTd', '$InputS', '$InputRR', '$InputGDA', '$InputP', '$InputT', '$InputHe', '$InputO', '$InputDok')");
       echo "
 				<script>
 					setTimeout(function() { 

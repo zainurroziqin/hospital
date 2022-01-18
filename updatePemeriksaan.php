@@ -24,7 +24,7 @@
          ";
       }
       else {
-         mysqli_query($conn, "UPDATE pemeriksaan SET idPasien = '$InputIP', diagnosa = '$InputDiag', suhu = '$InputSuhu', tanggal = '$InputTgl', tekananDarah = '$InputTd', Spo2 = '$InputS', RR = '$InputRR', GDA = '$InputGDA', penunjang = '$InputP', Tindakan = '$InputT', healthEducation = '$InputHe', obat = '$InputO', namaDokter = '$InputDok' where id = '$InputId'");
+         mysqli_query($conn, "UPDATE pemeriksaan SET idPasien = '$InputIP', diagnosa = '$InputDiag', suhu = '$InputSuhu', tanggalPeriksa = '$InputTgl', tekananDarah = '$InputTd', Spo2 = '$InputS', RR = '$InputRR', GDA = '$InputGDA', penunjang = '$InputP', Tindakan = '$InputT', healthEducation = '$InputHe', obat = '$InputO', namaDokter = '$InputDok' where id = '$InputId'");
          echo "
                <script>
                   setTimeout(function() { 
