@@ -45,10 +45,10 @@ $Pemeriksaan = query("SELECT pasien.*, pemeriksaan.* FROM pasien INNER JOIN peme
                         <table id="tbl_exporttable_to_xls" class="table table-striped table-bordered nowrap">
                             <thead>
                                 <tr>
-                                    <td colspan = "21" align="center">    <h3 >LAPORAN HASIL PEMERIKSAAN</h3></td>
+                                    <td colspan = "28" align="center">    <h3 >LAPORAN HASIL PEMERIKSAAN</h3></td>
                                 </tr>
                                 <tr>
-                                    <td colspan ="21" align="center"><h4>DOKUMENT NURSING INDIVIDUAL</h4></td>
+                                    <td colspan ="28" align="center"><h4>DOKUMENT NURSING INDIVIDUAL</h4></td>
                                 <tr>
                                 <tr>
                                     <th>No</th>
