@@ -34,7 +34,7 @@ $tanggal = date("Y-m-d");
                 <div class="card">
 
                             <form action="insertPemeriksaan.php" method="POST" enctype="multipart/form-data" autocomplete="OFF"> 
-                                <center><h4 class="heading-small text mb-4 ml-4 mt-5">Data Pemeriksaan</h4></center>
+                                <center><h4 class="heading-small text mb-4 ml-4 mt-5"> Data Pemeriksaan <i class="fas fa-file-medical"></i></h4></center>
                                 <div class="pl-lg-4">
                                 <div class="row">
                                     <div class="col-lg-2">

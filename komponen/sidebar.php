@@ -35,7 +35,7 @@
                 <li class="nav-item pcoded-menu-caption">
                     <label>Report</label>
                 </li>
-                <li class="nav-item"><a href="report.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-file-medical"></i></span><span class="pcoded-mtext">Hasil Pemeriksaan</span></a></li>
+                <li class="nav-item"><a href="report.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-file-medical-alt"></i></span><span class="pcoded-mtext">Hasil Pemeriksaan</span></a></li>
                 <!-- <li class="nav-item"><a href="Logout.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-fw fa-sign-out-alt"></i></span><span class="pcoded-mtext">Logout</span></a></li> -->
                 
             </ul>

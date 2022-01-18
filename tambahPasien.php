@@ -44,7 +44,7 @@ $tanggal = date("Y-m-d");
                 <div class="card">
 
                             <form action="insertPasien.php" method="POST" enctype="multipart/form-data" autocomplete="OFF"> 
-                                <center><h4 class="heading-small text mb-4 ml-4 mt-5">Data Pasien</h4></center>
+                                <center><h4 class="heading-small text mb-4 ml-4 mt-5">  Data Pasien  <i class="fas fa-user-injured"></i></h4></center>
                                 <div class="pl-lg-4">
                                 <div class="row">
                                     <div class="col-lg-2">
@@ -108,7 +108,7 @@ $tanggal = date("Y-m-d");
                                 </div>
                                 <hr class="my-4" />
                                 <!-- Address -->
-                                <center><h4 class="heading-small text mb-4 ml-4">Pengkajian</h4></center>
+                                <center><h4 class="heading-small text mb-4 ml-4">Pengkajian <i class="fas fa-file-signature"></i></h4></center>
                                 <div class="pl-lg-4">
                                     <div class="row">
                                         <div class="col-md-4">
