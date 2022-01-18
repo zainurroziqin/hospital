@@ -77,6 +77,12 @@ $tanggal = date("Y-m-d");
                                             <input type="text" class="form-control" name="Spo2" oninput="this.value=this.value.replace(/[^0-9]/, '')" maxlength="5" placeholder="Maksimal 50 kata">    
                                         </div>
                                     </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Denyut Nadi</label>
+                                            <input type="text" class="form-control" name="nadi" oninput="this.value=this.value.replace(/[^0-9]/, '')" maxlength="5" placeholder="Maksimal 50 kata">    
+                                        </div>
+                                    </div>
                                 </div>
                                 </div>
                                 <div class="row">
