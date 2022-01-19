@@ -68,9 +68,9 @@ $Pemeriksaan = query("SELECT pasien.*, pemeriksaan.* FROM pasien INNER JOIN peme
                                     <th>Suhu</th>
                                     <th>Tekanan Darah</th>
                                     <th>Spo2</th>
-                                    <th>RR</th>
+                                    <th>Respirasi Rate</th>
                                     <th>Denyut Nadi</th>
-                                    <th>GDA</th>
+                                    <th>Gula Darah</th>
                                     <th>Penunjang</th>
                                     <th>Tindakan</th>
                                     <th>Health Education</th>
@@ -96,12 +96,12 @@ $Pemeriksaan = query("SELECT pasien.*, pemeriksaan.* FROM pasien INNER JOIN peme
                             <td><?= $row["jam"]; ?></td>
                             <td><?= $row["tanggalPeriksa"]; ?></td>
                             <td><?= $row["diagnosa"]; ?></td>
-                            <td><?= $row["suhu"]; ?></td>
-                            <td><?= $row["tekananDarah"]; ?></td>
-                            <td><?= $row["Spo2"]; ?></td>
-                            <td><?= $row["RR"]; ?></td>
-                            <td><?= $row["nadi"]; ?></td>
-                            <td><?= $row["GDA"]; ?></td>
+                            <td><?= $row["suhu"]; ?>℃</td>
+                            <td><?= $row["tekananDarah"]; ?> mmHg</td>
+                            <td><?= $row["Spo2"]; ?>%</td>
+                            <td><?= $row["RR"]; ?>/Menit</td>
+                            <td><?= $row["nadi"]; ?>/Menit</td>
+                            <td><?= $row["GDA"]; ?> mg/dl</td>
                             <td><?= $row["penunjang"]; ?></td>
                             <td><?= $row["Tindakan"]; ?></td>
                             <td><?= $row["healthEducation"]; ?></td>
