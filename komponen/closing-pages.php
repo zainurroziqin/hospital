@@ -28,58 +28,67 @@
     $(function() {
         var options = {
             chart: {
+                height: 250,
                 type: 'area',
-                height: 50,
-                sparkline: {
-                    enabled: true
-                }
             },
             dataLabels: {
                 enabled: false
             },
-            colors: ["#4680ff"],
+            stroke: {
+                width: 2,
+                curve: 'smooth'
+            },
+            colors: ["#ff5252", "#4680ff"],
             fill: {
                 type: 'solid',
-                opacity: 0.3,
+                opacity: 0.2,
             },
             markers: {
                 size: 3,
                 opacity: 0.9,
                 colors: "#fff",
-                strokeColor: "#4680ff",
+                strokeColor: ["#ff5252", "#4680ff"],
                 strokeWidth: 2,
                 hover: {
                     size: 7,
                 }
             },
-            stroke: {
-                curve: 'straight',
-                width: 3,
-            },
             series: [{
-                name: 'series1',
-                data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54, 25, 66, 41, 89, 63, 54, 25, 66, 41, 89]
-            }],
-            tooltip: {
-                fixed: {
-                    enabled: false
-                },
-                x: {
-                    show: false
-                },
-                y: {
-                    title: {
-                        formatter: function(seriesName) {
-                            return 'Operation '
+                name: 'Pasien',
+                data: [<?php
+                    for($i = 0; $i < count($jumlahPasien); $i++){
+                        echo $jumlahPasien[$i];
+                        if($i < (count($jumlahPasien))){
+                            echo ", ";
                         }
                     }
+                ?>]
+            }, {
+                name: 'Pemeriksaan',
+                data: [<?php
+                    for($i = 0; $i < count($jumlahPemeriksaan); $i++){
+                        echo $jumlahPemeriksaan[$i];
+                        if($i < (count($jumlahPemeriksaan))){
+                            echo ", ";
+                        }
+                    }
+                ?>]
+            }],
+
+            xaxis: {
+                type: 'text',
+                categories: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
+            },
+            tooltip: {
+                x: {
+                    format: 'dd/MM/yy HH:mm'
                 },
-                marker: {
-                    show: false
-                }
             }
-        };
-        var chart = new ApexCharts(document.querySelector("#operation-chart"), options);
+        }
+        var chart = new ApexCharts(
+            document.querySelector("#summary-chart"),
+            options
+        );
         chart.render();
     });
     // [ operation-processed ] end

@@ -56,7 +56,7 @@ $tanggal = date("Y-m-d");
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Nama Pasien</label>
-                                            <input type="text" class="form-control" name="namaPasien" oninput="this.value=this.value.replace(/[^a-z A-Z]/, '')" placeholder="Masukkan nama maks. 30 kata">
+                                            <input type="text" class="form-control" name="namaPasien" oninput="this.value=this.value.replace(/[^a-z A-Z.,]/, '')" placeholder="Masukkan nama maks. 30 kata">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">

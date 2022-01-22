@@ -129,7 +129,7 @@ if (isset($_POST['submit'])) {
 			<div class="row align-items-center text-center">
 				<div class="col-md-12">
 					<div class="card-body">
-						<img src="assets/images/logo-dark.png" alt="" class="img-fluid mb-4">
+						<img src="assets/images/dni-dark.png" alt="" class="img-fluid mb-4">
                         <form action="" method="POST">
 						<h4 class="mb-3 f-w-400">Signin</h4>
 						<div class="form-group mb-3">
