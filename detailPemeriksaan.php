@@ -80,7 +80,7 @@ $SelectData = query("SELECT * FROM pemeriksaan WHERE id = '$idPem'")[0];
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Denyut Nadi</label>
-                                            <input type="text" class="form-control" name="nadi" placeholder="Maksimal 50 kata" value="<?= $SelectData["nadi"];?>">    
+                                            <input type="text" class="form-control" name="nadi" placeholder="Masukkan Denyut Nadi" maxlength="3" value="<?= $SelectData["nadi"];?>">    
                                         </div>
                                     </div>
                                 </div>

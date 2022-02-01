@@ -68,7 +68,7 @@ include 'config/koneksi.php';
                                 <i class="fas fa-user-md f-36 text-c-purple"></i>
                             </div>
                             <div class="col-auto">
-                                <h6 class="text-muted m-b-10">Dokter</h6>
+                                <h6 class="text-muted m-b-10">Perawat</h6>
                                 <h2 class="m-b-0"><?php 
                                  $GetTable = mysqli_query($conn, "SELECT COUNT(username) AS JumlahData FROM user");
                                  $GetData = mysqli_fetch_array($GetTable);

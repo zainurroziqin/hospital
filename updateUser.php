@@ -13,7 +13,7 @@
          ";
       }
       else {
-         mysqli_query($conn, "UPDATE user SET username = '$InputUser', password = '$InputPass', fullname = '$InputNama'");
+         mysqli_query($conn, "UPDATE user SET password = '$InputPass', fullname = '$InputNama' WHERE username = '$InputUser'");
          echo "
                <script>
                   setTimeout(function() { 

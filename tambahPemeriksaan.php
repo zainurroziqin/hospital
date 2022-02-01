@@ -80,7 +80,7 @@ $tanggal = date("Y-m-d");
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Denyut Nadi</label>
-                                            <input type="text" class="form-control" name="nadi" oninput="this.value=this.value.replace(/[^0-9]/, '')" maxlength="2" placeholder="Maksimal 50 kata">    
+                                            <input type="text" class="form-control" name="nadi" oninput="this.value=this.value.replace(/[^0-9]/, '')" maxlength="3" placeholder="Maksimal 50 kata">    
                                         </div>
                                     </div>
                                 </div>
